@@ -1,66 +1,208 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Faiz Pratama — Portfolio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Personal portfolio website showcasing my experience, technical skills, and selected web development projects.
 
-## About Laravel
+Built with Laravel and designed with a modern dark monochrome interface, subtle animations, and responsive layouts.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## About
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+I'm **Faiz Pratama**, a Fullstack Web Developer focused on building modern and maintainable web applications.
 
-## Learning Laravel
+I primarily work with:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laravel / PHP
+- JavaScript
+- MySQL
+- REST API
+- Blade
+- Git & Bitbucket
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+This portfolio was built to showcase selected projects and my experience developing real-world web applications.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## Selected Projects
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 01 — EB Health
 
-### Premium Partners
+**Employee Benefit Insurance Management System**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+A web-based insurance management system developed to support Employee Benefit operations and workflows.
 
-## Contributing
+My work includes frontend and backend development, API integration, business logic implementation, and application interface development.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Tech Stack**
 
-## Code of Conduct
+`Laravel` `PHP` `MySQL` `JavaScript` `REST API` `Blade` `Git`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+### 02 — ASKEDIR
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Personal Accident Claim Management System**
 
-## License
+Redesign and continued development of an existing personal accident insurance application.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The work focused on improving interface consistency, navigation, and operational workflows while maintaining the application's existing business processes.
+
+**Tech Stack**
+
+`Laravel` `PHP` `MySQL` `JavaScript` `Blade` `Git`
+
+---
+
+### 03 — Company Profile
+
+**Corporate Website & Content Management**
+
+Redesign and development of a modern corporate website for an insurance broker.
+
+The project focused on improving visual presentation, information structure, and the way company services are presented to visitors.
+
+**Tech Stack**
+
+`Laravel` `PHP` `MySQL` `JavaScript` `Blade` `Git`
+
+---
+
+## Portfolio Features
+
+- Modern dark monochrome design
+- Responsive layout
+- Interactive animations
+- Project case studies
+- Optimized WebP images
+- SEO metadata
+- Open Graph social preview
+- Responsive project showcase
+- Custom Laravel Blade components
+
+---
+
+## Tech Stack
+
+| Technology | Usage |
+| --- | --- |
+| Laravel 9 | Application framework |
+| PHP | Backend development |
+| Blade | Template engine |
+| JavaScript | Interactions & animations |
+| MySQL | Database |
+| Vite | Frontend asset bundling |
+| CSS | Custom responsive interface |
+| Git | Version control |
+
+---
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/izz-s/portfolio.git
+```
+
+Enter the project directory:
+
+```bash
+cd portfolio
+```
+
+Install PHP dependencies:
+
+```bash
+composer install
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+Create the environment file:
+
+```bash
+cp .env.example .env
+```
+
+Generate the application key:
+
+```bash
+php artisan key:generate
+```
+
+Run Vite:
+
+```bash
+npm run dev
+```
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## Production Build
+
+Build optimized frontend assets with:
+
+```bash
+npm run build
+```
+
+---
+
+## Project Structure
+
+```text
+portfolio/
+├── app/
+├── public/
+│   └── images/
+│       └── projects/
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│       ├── components/
+│       ├── layouts/
+│       └── projects/
+├── routes/
+└── README.md
+```
+
+---
+
+## Contact
+
+**Faiz Pratama**
+
+Fullstack Web Developer
+
+Email: `pratamafaiz1010@gmail.com`
+
+LinkedIn: `Faiz Pratama`
+
+---
+
+## Notes
+
+Some projects displayed in this portfolio were developed as part of professional work.
+
+Source code, credentials, internal data, and other confidential materials from those systems are not included in this repository.
+
+---
+
+© 2026 Faiz Pratama
