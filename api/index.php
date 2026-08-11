@@ -7,14 +7,29 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+try {
 
-$kernel = $app->make(Kernel::class);
+    $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-$response = $kernel->handle(
-    $request = Request::capture()
-);
+    $kernel = $app->make(Kernel::class);
 
-$response->send();
+    $request = Request::capture();
 
-$kernel->terminate($request, $response);
+    $response = $kernel->handle($request);
+
+    $response->send();
+
+    $kernel->terminate($request, $response);
+} catch (Throwable $e) {
+
+    http_response_code(500);
+
+    header('Content-Type: text/plain; charset=UTF-8');
+
+    echo "=== LARAVEL BOOT ERROR ===\n\n";
+    echo "Type: " . get_class($e) . "\n\n";
+    echo "Message:\n" . $e->getMessage() . "\n\n";
+    echo "File:\n" . $e->getFile() . "\n\n";
+    echo "Line:\n" . $e->getLine() . "\n\n";
+    echo "Trace:\n" . $e->getTraceAsString();
+}
