@@ -1149,6 +1149,7 @@
 
             <div class="contact-info">
 
+                {{-- EMAIL --}}
                 <a href="mailto:pratamafaiz1010@gmail.com" class="contact-item scroll-reveal">
 
                     <span class="contact-label">
@@ -1167,6 +1168,8 @@
 
                 </a>
 
+
+                {{-- WHATSAPP --}}
                 <a href="https://wa.me/6287716180033" target="_blank" rel="noopener noreferrer"
                     class="contact-item scroll-reveal">
 
@@ -1186,6 +1189,8 @@
 
                 </a>
 
+
+                {{-- LINKEDIN --}}
                 <a href="https://www.linkedin.com/in/faiz-pratama-302b1b2a8/" target="_blank" rel="noopener noreferrer"
                     class="contact-item scroll-reveal">
 
@@ -1206,6 +1211,7 @@
                 </a>
 
 
+                {{-- LOCATION --}}
                 <div class="contact-item scroll-reveal">
 
                     <span class="contact-label">

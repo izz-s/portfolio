@@ -3446,12 +3446,11 @@ img {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border-left: 1px solid var(--border);
 }
-
 
 .contact-item {
     min-width: 0;
@@ -3460,23 +3459,23 @@ img {
 
     padding: 30px;
 
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
     transition:
         background 0.3s ease;
 }
 
-.contact-item:first-child {
-    padding-left: 0;
-}
-
-.contact-item:not(:last-child) {
-    border-right: 1px solid var(--border);
-}
-
+/* Link items only */
 a.contact-item:hover {
     background:
-        rgba(255,255,255,0.015);
+        rgba(255, 255, 255, 0.015);
 }
 
+
+/* =========================================================
+   CONTACT LABEL
+========================================================= */
 
 .contact-label {
     display: block;
@@ -3493,15 +3492,23 @@ a.contact-item:hover {
 }
 
 
+/* =========================================================
+   CONTACT VALUE
+========================================================= */
+
 .contact-value {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 15px;
 }
 
 .contact-value > span:first-child {
+    min-width: 0;
+
     overflow: hidden;
 
     color: var(--text-secondary);
@@ -3518,10 +3525,13 @@ a.contact-item:hover {
 
 a.contact-item:hover
 .contact-value > span:first-child {
-
     color: var(--text-primary);
 }
 
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
 
 .contact-icon {
     flex-shrink: 0;
@@ -3534,16 +3544,22 @@ a.contact-item:hover
 
 a.contact-item:hover
 .contact-icon {
-
     transform:
         translate(3px, -3px);
 }
 
 
+/* =========================================================
+   CONTACT STATUS
+========================================================= */
+
 .contact-status {
+    flex-shrink: 0;
+
     padding: 4px 7px;
 
     border: 1px solid var(--border);
+
     border-radius: 4px;
 
     color: var(--text-muted) !important;
@@ -3555,6 +3571,32 @@ a.contact-item:hover
     letter-spacing: 0.08em;
 }
 
+
+/* =========================================================
+   CONTACT RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        padding: 24px 20px;
+    }
+
+    .contact-value > span:first-child {
+        white-space: normal;
+
+        overflow: visible;
+
+        text-overflow: unset;
+
+        overflow-wrap: anywhere;
+    }
+
+}
 
 /* =========================================================
    FOOTER
