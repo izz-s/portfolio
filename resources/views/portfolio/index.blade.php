@@ -90,8 +90,12 @@
 
                     <div class="social-line"></div>
 
-                    <a href="https://www.linkedin.com/in/faiz-pratama-302b1b2a8/" target="_blank">
+                    <a href="https://www.linkedin.com/in/faiz-pratama-302b1b2a8/" target="_blank" rel="noopener noreferrer">
                         LinkedIn
+                    </a>
+
+                    <a href="https://wa.me/6287716180033" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
                     </a>
 
                 </div>
@@ -1163,6 +1167,24 @@
 
                 </a>
 
+                <a href="https://wa.me/6287716180033" target="_blank" rel="noopener noreferrer"
+                    class="contact-item scroll-reveal">
+
+                    <span class="contact-label">
+                        WHATSAPP
+                    </span>
+
+                    <div class="contact-value">
+                        <span>
+                            +62 877-1618-0033
+                        </span>
+
+                        <span class="contact-icon">
+                            ↗
+                        </span>
+                    </div>
+
+                </a>
 
                 <a href="https://www.linkedin.com/in/faiz-pratama-302b1b2a8/" target="_blank" rel="noopener noreferrer"
                     class="contact-item scroll-reveal">
@@ -1242,8 +1264,13 @@
                     <div>
                         <span>SOCIAL</span>
 
-                        <a href="https://www.linkedin.com/in/faiz-pratama-302b1b2a8/" target="_blank">
+                        <a href="https://www.linkedin.com/in/faiz-pratama-302b1b2a8/" target="_blank"
+                            rel="noopener noreferrer">
                             LinkedIn ↗
+                        </a>
+
+                        <a href="https://wa.me/6287716180033" target="_blank" rel="noopener noreferrer">
+                            WhatsApp ↗
                         </a>
                     </div>
 
