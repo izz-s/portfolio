@@ -18,7 +18,8 @@
             <span>↗</span>
         </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"
+            aria-controls="navbarMenu" aria-expanded="false">
             <span></span>
             <span></span>
         </button>
