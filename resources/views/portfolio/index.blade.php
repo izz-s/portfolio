@@ -14,8 +14,28 @@
 
 @section('content')
 
-    {{-- Mouse Glow --}}
-    <div class="cursor-glow" id="cursorGlow"></div>
+
+    {{-- CINEMATIC WELCOME INTRO --}}
+    <div id="welcomeIntro" class="welcome-intro" aria-label="Welcome animation">
+        <canvas id="welcomeCanvas" aria-hidden="true"></canvas>
+
+        <div class="welcome-content">
+            <span class="welcome-eyebrow">WELCOME TO MY WORLD</span>
+
+            <h1 class="welcome-title">
+                FAIZ <span>PRATAMA.</span>
+            </h1>
+
+            <p class="welcome-subtitle">FULLSTACK WEB DEVELOPER</p>
+
+            <div class="welcome-line"></div>
+        </div>
+
+        <button id="skipIntro" class="welcome-skip" type="button">
+            SKIP INTRO ↗
+        </button>
+    </div>
+
 
     {{-- Navbar --}}
     <x-navbar />
@@ -23,8 +43,8 @@
     {{-- Hero --}}
     <section class="hero" id="home">
 
-        <div class="hero-grid"></div>
-        <div class="hero-glow"></div>
+
+
 
         <div class="container hero-container">
 
@@ -32,7 +52,7 @@
 
                 <div class="availability reveal">
                     <span class="availability-dot"></span>
-                    Available for opportunities
+                    Open to opportunities & collaborations
                 </div>
 
                 <p class="hero-intro reveal">
@@ -79,6 +99,31 @@
                             ↗
                         </span>
                     </a>
+
+
+
+                    <div class="cv-dropdown">
+                        <button type="button" class="btn btn-secondary cv-dropdown-toggle" aria-expanded="false"
+                            aria-haspopup="true">
+                            Download CV
+                            <span>↓</span>
+                        </button>
+
+                        <div class="cv-dropdown-menu">
+                            <a href="{{ asset('files/Faiz_Pratama_CV.pdf') }}" download="Faiz_Pratama_CV.pdf">
+                                <span>Bahasa Indonesia</span>
+                                <span>↓</span>
+                            </a>
+
+                            <a href="{{ asset('files/Faiz_Pratama_CV_English.pdf') }}"
+                                download="Faiz_Pratama_CV_English.pdf">
+                                <span>English</span>
+                                <span>↓</span>
+                            </a>
+                        </div>
+                    </div>
+
+
 
                 </div>
 
@@ -233,9 +278,7 @@
 
                 </div>
 
-                <div class="floating-tag tag-laravel">
-                    Laravel
-                </div>
+                <div class="floating-tag tag-laravel">✦ Laravel Developer</div>
 
                 <div class="floating-tag tag-api">
                     REST API
@@ -431,9 +474,9 @@
                         </span>
                     </div>
 
-                    <div class="skill-icon">
-                        L
-                    </div>
+                    <div class="skill-icon"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                            alt="Laravel logo" loading="lazy" width="52" height="52"></div>
 
                     <h3>Laravel</h3>
 
@@ -461,9 +504,9 @@
                         </span>
                     </div>
 
-                    <div class="skill-icon">
-                        JS
-                    </div>
+                    <div class="skill-icon"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="JavaScript logo" loading="lazy" width="52" height="52"></div>
 
                     <h3>JavaScript</h3>
 
@@ -491,9 +534,9 @@
                         </span>
                     </div>
 
-                    <div class="skill-icon">
-                        DB
-                    </div>
+                    <div class="skill-icon"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                            alt="MySQL logo" loading="lazy" width="52" height="52"></div>
 
                     <h3>MySQL</h3>
 
@@ -521,9 +564,9 @@
                         </span>
                     </div>
 
-                    <div class="skill-icon">
-                        API
-                    </div>
+                    <div class="skill-icon"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg"
+                            alt="REST API logo" loading="lazy" width="52" height="52"></div>
 
                     <h3>REST API</h3>
 
@@ -541,7 +584,95 @@
                 </article>
 
             </div>
+            {{-- =========================================
+     DEVELOPMENT & SECURITY TOOLKIT
+========================================= --}}
 
+            @php
+                $webTools = [
+                    ['name' => 'PHP', 'icon' => 'php/php-original.svg'],
+                    ['name' => 'Laravel', 'icon' => 'laravel/laravel-original.svg'],
+                    ['name' => 'CodeIgniter 3', 'icon' => 'codeigniter/codeigniter-plain.svg'],
+                    ['name' => 'JavaScript', 'icon' => 'javascript/javascript-original.svg'],
+                    ['name' => 'Vue.js', 'icon' => 'vuejs/vuejs-original.svg'],
+                    ['name' => 'Vite', 'icon' => 'vitejs/vitejs-original.svg'],
+                    ['name' => 'MySQL', 'icon' => 'mysql/mysql-original.svg'],
+                    ['name' => 'Git', 'icon' => 'git/git-original.svg'],
+                    ['name' => 'Bitbucket', 'icon' => 'bitbucket/bitbucket-original.svg'],
+                    ['name' => 'Bootstrap', 'icon' => 'bootstrap/bootstrap-original.svg'],
+                    ['name' => 'HTML5', 'icon' => 'html5/html5-original.svg'],
+                    ['name' => 'CSS3', 'icon' => 'css3/css3-original.svg'],
+                    ['name' => 'VS Code', 'icon' => 'vscode/vscode-original.svg'],
+                    ['name' => 'Postman', 'icon' => 'postman/postman-original.svg'],
+                ];
+
+                $securityTools = [
+                    ['name' => 'Kali Linux', 'icon' => 'kali-linux.svg'],
+                    ['name' => 'VMware', 'icon' => 'vmware.svg'],
+                    ['name' => 'Nmap', 'icon' => 'nmap.svg'],
+                    ['name' => 'SQLmap', 'icon' => 'sqlmap.svg'],
+                    ['name' => 'Gobuster', 'icon' => 'gobuster.svg'],
+                    ['name' => 'Burpsuite', 'icon' => 'burpsuite.svg'],
+                ];
+            @endphp
+
+            <div class="toolkit-layout">
+
+                {{-- WEB DEVELOPMENT --}}
+                <div class="tools-panel scroll-reveal">
+
+                    <div class="tools-panel-heading">
+                        <span>WEB DEVELOPMENT TOOLS</span>
+                        <p>Frameworks, languages & development tools</p>
+                    </div>
+
+                    <div class="tools-logo-grid">
+
+                        @foreach ($webTools as $tool)
+                            <div class="tool-pill">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $tool['icon'] }}"
+                                    alt="{{ $tool['name'] }} logo" loading="lazy" width="28" height="28">
+                                <span>{{ $tool['name'] }}</span>
+                            </div>
+                        @endforeach
+
+                        <div class="tool-pill">
+                            <img src="https://www.svgrepo.com/show/330813/laragon.svg" alt="Laragon logo" loading="lazy"
+                                width="28" height="28">
+                            <span>Laragon</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{-- SECURITY & TESTING --}}
+                <div class="tools-panel security-panel scroll-reveal">
+
+                    <div class="tools-panel-heading">
+                        <span>SECURITY & TESTING TOOLS</span>
+                        <p>Security research & testing environment</p>
+                    </div>
+
+                    <div class="tools-logo-grid">
+
+                        @foreach ($securityTools as $tool)
+                            <div class="tool-pill">
+                                <img src="{{ asset('images/tools/' . $tool['icon']) }}" alt="{{ $tool['name'] }} logo"
+                                    loading="lazy" width="28" height="28">
+                                <span>{{ $tool['name'] }}</span>
+                            </div>
+                        @endforeach
+
+                    </div>
+
+                    <p class="security-note">
+                        Exploring web application security, reconnaissance,
+                        and vulnerability testing in authorized environments.
+                    </p>
+
+                </div>
+
+            </div>
         </div>
 
     </section>
@@ -585,9 +716,6 @@
 
             <div class="project-list">
 
-                {{-- =====================================================
-     PROJECT 01 — EB HEALTH
-====================================================== --}}
                 <article class="project-item scroll-reveal">
 
                     <div class="project-visual">
@@ -964,7 +1092,7 @@
 
                             <div>
                                 <h3>
-                                    Web Developer Intern
+                                    Information Technology Support
                                 </h3>
 
                                 <p>
@@ -1108,7 +1236,7 @@
     {{-- Contact --}}
     <section class="contact section" id="contact">
 
-        <div class="contact-glow"></div>
+
 
         <div class="container">
 
@@ -1210,6 +1338,24 @@
 
                 </a>
 
+
+                {{-- CURRICULUM VITAE --}}
+                <a href="{{ asset('files/Faiz_Pratama_CV.pdf') }}" download="Faiz_Pratama_CV.pdf"
+                    class="contact-item scroll-reveal">
+
+                    <span class="contact-label">
+                        CURRICULUM VITAE
+                    </span>
+
+                    <div class="contact-value">
+                        <span>Download my resume (PDF)</span>
+
+                        <span class="contact-icon">
+                            ↓
+                        </span>
+                    </div>
+
+                </a>
 
                 {{-- LOCATION --}}
                 <div class="contact-item scroll-reveal">
